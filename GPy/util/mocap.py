@@ -3,7 +3,7 @@ import numpy as np
 import math
 from GPy.util import datasets as dat
 
-class vertex:
+class vertex(object):
     def __init__(self, name, id, parents=[], children=[], meta = {}):
         self.name = name
         self.id = id
@@ -14,7 +14,7 @@ class vertex:
     def __str__(self):
         return self.name + '(' + str(self.id) + ').'
         
-class tree:
+class tree(object):
     def __init__(self):
         self.vertices = []
         self.vertices.append(vertex(name='root', id=0))
